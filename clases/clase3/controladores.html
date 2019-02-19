@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nombreApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Controladores</title>
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="controladorCliente">
+		<h3>Datos de Cliente:</h3>
+		<p>{{ nombre }} {{apellido}}</p>
+		<p>{{ ci }}</p>
+		<hr>		 
+	</div>
+	<div ng-controller="controladorProducto">
+		<h3>Producto</h3>
+		<p>Nombre Producto: {{ nombre }}</p>
+		<p>Costo de Producto: {{ costo }}</p>
+		<p><input type="text" ng-model="cantidad" placeholder="Ingrese cantidad de productos a comprar"></p>
+		<hr>
+		<p>Costo Total: {{ costo * cantidad | currency:"Bs. " }}</p>
+		<hr>		
+	</div>
+	
+	<script>
+		var nombreAplicacion = angular.module("nombreApp", [])
+		nombreAplicacion.controller("controladorCliente", ["$scope", function($scope) {
+			$scope.nombre = "Cristian"
+			$scope.apellido = "Chura"
+			$scope.edad = 20
+			$scope.ci = "9102134 LP"
+		}])
+
+		nombreAplicacion.controller("controladorProducto", ["$scope", function($scope) {
+			$scope.nombre = "Computadoras"
+			$scope.costo = 7500
+			$scope.cantidad = 0
+		}])
+
+	</script>
+
+</body>
+</html>

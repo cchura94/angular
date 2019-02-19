@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="nombreApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Introduccion Angular</title>
+	<!--
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+	-->
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+</head>
+<body>
+	<h1>Introducción con AngularJS</h1>
+	<h2>{{ 'Expresiones' }}</h2>
+	<p>{{ 2*5 }}</p>
+	<p>{{ 70/5*8-5*2 }} Dalmatas</p>
+	<h2>{{ 'Filtros' }}</h2>
+	<ol>
+		<li>Computadora {{ 50 | currency}}</li>
+		<li>Tv {{ 2500 | currency:"Bs. " }} </li>
+	</ol>
+	<div ng-controller="controlador">
+		<input type="text" ng-model="cantidad">
+		<h2>{{nombre}}</h2>
+		<p>{{cantidad * precio | currency:"Bs "}}</p>
+	</div>
+	<div ng-controller="controlador2">
+		<h2>{{nombre}}</h2>
+		
+	</div>
+	
+	
+
+	
+	<h1>{{nombre}}</h1>
+	<script>
+	var miAplicacion = angular.module('nombreApp', [])
+	miAplicacion.controller('controlador', ['$scope', function ($scope) {
+		$scope.nombre = "Cristian"
+		$scope.cantidad = 0
+		$scope.precio = 2.5
+	}])
+
+	miAplicacion.controller('controlador2', ['$scope', function ($scope) {
+		$scope.nombre = "Pedro"
+		$scope.cantidad = 0
+		$scope.precio = 2.5
+	}])
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Directivas</title>
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+</head>
+<body>
+	<main ng-app>
+		<h1>Directivas en Angular</h1>
+		<div >
+			<input type="text" ng-model="texto" ng-init="texto='Texto de prueba'">
+			<h2>Mayusculas: {{ texto | uppercase }}</h2>
+			<h2>Minusculas: {{ texto | lowercase }}</h2>
+			<h2>Minusculas: {{ texto | date }}</h2>
+			<p>{{ texto }}</p>
+		</div>
+		<div ng-controller='controlador'>
+			
+		</div>
+	</main>
+	
+</body>
+</html>

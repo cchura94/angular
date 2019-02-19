@@ -1,0 +1,14 @@
+<div>
+<h2>{{ titulo }}</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+<ol>
+	<li *ngFor="let us of usuario">{{us}} <button (click)="eliminar_usuario(us)">x</button></li>
+</ol>
+<button (click)="evento_nuevo()">{{ activo?'Ocultar':'Mostrar' }}</button>
+<div *ngIf="activo">	
+	<form (submit)="add_usuario(dato)">
+		<input #dato type="text">
+		<input type="submit" name="">
+	</form>
+</div>
+</div>

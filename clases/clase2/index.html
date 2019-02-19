@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular</title>
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+</head>
+<body>
+	<div>
+		{{ 'hola mundo' }}
+		{{ 5+7 + ' suma '+ 4*6 }}
+		<div ng-init="a=7;b=8">
+			{{ a+b }}
+		</div>
+		<div ng-init="x=['Ana', 'Juan', 'Pedro']">
+			{{ x[1] }}
+		</div>
+		<div ng-init="nombre='Cristian';apellido:'Chura'">
+			Mi nombre es {{nombre}} y mi apellido es {{apellido}}
+			<p ng-bind="nombre"></p>
+			
+		</div>
+
+	</div>
+</body>
+</html>

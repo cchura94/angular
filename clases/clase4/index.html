@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app1">
+<head>
+	<meta charset="UTF-8">
+	<title>Controladores y Metodos</title>
+	<script src="./js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="controlador1">
+		<input type="text" ng-model="nombre">
+		<p>{{ nombre }}</p>
+		<h2>{{ nombres[2] }}</h2>
+		<h2>Lista de Datos</h2>
+		<ol>
+			<li ng-repeat="dato in nombres">{{ dato | uppercase }}</li>
+		</ol>
+		<h2>Lista de Personas (Objetos)</h2>
+
+		<ul>
+			<li ng-repeat="p in personas">
+				<p>{{ p.nombre }}</p>
+				<p>{{ p.apellido }}</p>
+				<ol>
+					<li ng-repeat="t in p.telefonos">{{ t.cod_pais }}-{{ t.numero }}</li>
+				</ol>
+				<p>{{p.direccion}}</p>				
+			</li>
+		</ul>
+
+	</div>
+
+	<script>
+		var app = angular.module("app1", [])
+		app.controller("controlador1", ["$scope", function($scope) {
+			$scope.nombre="Hola";
+			$scope.nombres = ["Ana", "Pedro", "Andres", "carlos", "cristian"]
+			$scope.personas = [
+				{
+					"nombre": "cristian",
+					"apellido": "Chura",
+					"ci": 123442112,
+					"telefonos": [
+						{
+						"cod_pais": "+591",
+						"numero": 73277937
+						}
+					],
+					"direccion": "Av. 7 de agosto Nro 123"
+				},
+				{
+					"nombre": "Oscar",
+					"apellido": "Chavez",
+					"ci": 6787878,
+					"telefonos": [{
+						"cod_pais": "+591",
+						"numero": 57577567
+						}			
+					],
+					"direccion": "Av. 7 de agosto Nro 123"
+				},
+			]
+		}])
+
+	</script>	
+</body>
+</html>

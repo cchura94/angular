@@ -1,0 +1,70 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<table border="1">
+  <thead>
+    <th>Id</th>
+    <th>Titulo</th>
+    <th>Contenido</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of publicaciones">
+      <td>{{p.id}}</td>
+      <td>{{p.title}}</td>
+      <td>{{p.body}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<div style="text-align:center">
+  <h1>
+    Bienvenido a {{ title }}!
+  </h1>
+  <h2>{{ hola }}</h2>
+</div>
+<div class="personas">
+    {{ personas }}
+    <ol>
+      <li *ngFor="let p of personas">{{ p }}</li>
+    </ol>
+</div>
+
+<primer-componente></primer-componente>
+<primer-componente></primer-componente>
+
+<div class="datos">
+    <p>Nombre: {{nombre}}</p>
+    <p>Edad: {{edad}}</p>
+    <h2>Direccion</h2>
+    <p>Avenida: {{direccion.avenida}}</p>
+    <p>Calle: {{direccion.calle}}</p>
+    <p>Ciudad: {{direccion.ciudad}}</p>
+    <p>Nro Casa: {{direccion.nro}}</p>
+
+    <input type="text" [(ngModel)]="nombre">
+</div>
+
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+>
+<ul>
+  <li>
+    <a routerLink="/">Producto</a>
+    <a routerLink="/primer">Primer Componente</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

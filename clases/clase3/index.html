@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<input type="text" id="t" onkeypress="algo()">
+	<h2 id="tex"></h2>
+
+	<script>
+		function algo () {
+			var texto = document.getElementById("t").value
+			document.getElementById("tex").innerHTML = texto
+		}
+
+	</script>
+	
+</body>
+</html>
