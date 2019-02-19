@@ -1,0 +1,51 @@
+*****************************************
+**************** ANGULAR ****************
+*****************************************
+
+#Requisitos (Node.js, NPM)
+
+#Instalar el CLI angular
+>	npm install -g @angular/cli
+
+#Nueva aplicacion
+>	ng new miNombreApp
+
+#Iniciar la App Angular
+>	ng serve --open
+
+#generar nuevo componente
+>	ng generate component miNombreComponente
+
+#generar nuevo servicio
+>	ng generate service data
+
+
+***************************************************
+## Para realizar cambios 
+	Encontrarás la implementación del shell AppComponent distribuido en tres archivos:
+
+	1. app.component.ts 	- el código de clase del componente, escrito en TypeScript.
+	2. app.component.html 	- La plantilla del componente, escrita en HTML.
+	3. app.component.css 	- Los estilos CSS privados del componente.
+
+# para uso de [(ngModel)]
+import { FormsModule } from '@angular/forms';
+
+#Para uso de servicios http inportar en app ts
+import { HttpClient } from '@angular/common/http';
+#importar en modulo
+import { HttpClientModule } from '@angular/common/http';
+
+# Para importar Router
+>import { RouterModule, Route } from '@angular/router';
+
+#material
+npm install --save @angular/material @angular/cdk
+
+#añadir schemas de material
+ng add @angular/material
+
+#generar menu de navegacion
+
+ng generate @angular/material:material-nav --name mi-nav
+dashboard
